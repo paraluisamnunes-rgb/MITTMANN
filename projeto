@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfólio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Luisa Mittmann</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre Mim</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+       
+        <section id="sobre">
+            <h2>Sobre Mim</h2>
+            <p>Nome:Luisa
+               Idade:19 anos 
+               cursando na faculdade:matemática 
+            </p>
+        </section>
+
+        <section id="projetos">
+            <h2>alguns projetos feitos até agora</h2>
+           
+            <article>
+                <h3>projeto 1: jogo jokenpô</h3>
+            </article>
+
+
+            <article>
+                <h3>projeto 2: site de login</h3>
+            </article>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <button id="btn-contato">Clique para ver o e-mail</button>
+            <p id="info-contato" style="display: none;">luisa.nunes@aluno.senac.rio</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Luisa Mittmann. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+///////////////ESTILIZAÇÃO
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+section {
+    margin-bottom: 40px;
+}
+
+
+article {
+    background: white;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: white;
+}
+///////////////DINAMISMO
+// Aguarda o DOM carregar
+document.addEventListener("DOMContentLoaded", () => {
+    const botao = document.getElementById("btn-contato");
+    const textoContato = document.getElementById("info-contato");
+
+
+    botao.addEventListener("click", () => {
+        if (textoContato.style.display === "none") {
+            textoContato.style.display = "block";
+            botao.textContent = "Esconder e-mail";
+        } else {
+            textoContato.style.display = "none";
+            botao.textContent = "Clique para ver o e-mail";
+        }
+    });
+});
+///////////////--index
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mittmann | Portfólio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/blocks.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-custom-image">//colocar bg image
+
+
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="imagens/logotipo-pinterest.png" alt="Logotipo Oficial Mittmann" height="40" class="me-2">
+                <span>MITTMANN</span>
+            </a>
+            <button class="navbar-expand-lg navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre Nós</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <main class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+               
+                <section class="custom-card p-5 mb-4 text-center">
+                    <h1 class="display-4 fw-bold mb-3 text-gradient">Bem-vindo</h1>
+                    <hr class="my-4 text-white-50">
+                </section>
+
+                <section class="custom-card p-4 mb-4 text-center">
+                    <h2 class="h3 mb-3 text-warning">lofi pra escutar</h2>
+                    <p class="text-light-50 mb-4">Aproveite para ouvir música enquanto isso!</p>
+                    <div class="ratio ratio-16x9 border-radius-custom">
+                        <iframe src="iframe width="560 height="315" src="https://www.youtube.com/embed/4YFu4dvMHHY?si=iPAqNn_FddQ2va1S" title="dumb-nirvana" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>allowfullscreen></iframe>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4 mt-auto border-top border-secondary">
+        <div class="container">
+            <p class="mb-1">Contato administrativo: contato@mittmann.dev</p>
+            <p class="small text-white-50 mb-0">&copy; 2026 MITTMANN. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <button id="btnVoltarTopo" class="btn btn-warning position-fixed bottom-0 end-0 m-4" style="display: none; z-index: 1000;" onclick="voltarAoTopo()">↑ Topo</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+///////////////Sobre
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre | Mittmann</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-custom-image">
+
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="imagens/logotipo-pinterest.png" alt="Logotipo Oficial Mittmann" height="40" class="me-2">
+                <span>MITTMANN</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="sobre.html">Sobre Nós</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <footer class="bg-dark text-white text-center py-4 mt-auto border-top border-secondary">
+        <div class="container">
+            <p class="small text-white-50 mb-0">&copy; 2026 MITTMANN. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+///////////////Contato
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Mittmann</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-custom-image">
+
+
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="imagens/logotipo-pinterest.png" alt="Logotipo Oficial Mittmann" height="40" class="me-2">
+                <span>MITTMANN</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre Nós</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <main class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+               
+                <section class="custom-card p-5">
+                    <h1 class="h2 mb-4 text-center text-gradient fw-bold">Fale Conosco</h1>
+                   
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <form id="formContato" onsubmit="return validarFormulario(event)">
+                                <div class="mb-3">
+                                    <label for="nome" class="form-label text-white">Nome</label>
+                                    <input type="text" class="form-control" id="nome" placeholder="Seu nome completo">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label text-white">E-mail</label>
+                                    <input type="email" class="form-control" id="email" placeholder="nome@exemplo.com">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="assunto" class="form-label text-white">Assunto</label>
+                                    <input type="text" class="form-control" id="assunto" placeholder="Motivo do contato (Ex: Sugestão, Dúvida)">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="mensagem" class="form-label text-white">Mensagem</label>
+                                    <textarea class="form-control" id="mensagem" rows="4" placeholder="Escreva sua mensagem aqui..."></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-warning w-100 fw-bold py-2 shadow-sm">Enviar Mensagem</button>
+                            </form>
+                        </div>
+
+
+                        <div class="col-lg-6 d-flex flex-column justify-content-between">
+                            <div class="h-100 text-center">
+                                <label class="form-label text-white mb-2 d-block text-start">Nossa Localização</label>
+                                <div class="ratio ratio-4x3 border-radius-custom shadow border border-secondary" style="min-height: 250px;">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117611.84457319985!2d-43.1407421!3d-22.9010959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9983b6b6dee7e3%3A0x7d6f5f9a76af39!2zTml0ZXLDConstraintksIFJK!5e0!3m2!1spt-BR!2sbr!4v1710000000000" allowfullscreen="" loading="lazy"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="bg-dark text-white text-center py-4 mt-auto border-top border-secondary">
+        <div class="container">
+            <p class="small text-white-50 mb-0">&copy; 2026 MITTMANN. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+///////////////OUTRA ESTILIZAÇÃO/* ==========================================================================
+Configurações de Fundo e Layout (Imagem de fundo em vez de cor sólida)
+========================================================================== */
+.bg-custom-image {
+ /* Use uma bela imagem colorida da sua pasta ou link de fundo */
+ background-image: linear-gradient(135deg, rgba(20, 20, 30, 0.85), rgba(40, 20, 50, 0.85)), url('imagens/fundo-pinterest.jpg');
+ background-size: cover;
+ background-position: center;
+ background-attachment: fixed;
+ background-repeat: no-repeat;
+ min-height: 100vh;
+ display: flex;
+ flex-direction: column;
+}
+
+
+/* ==========================================================================
+Classes Reutilizáveis (Cards translúcidos - efeito Glassmorphism)
+========================================================================== */
+.custom-card {
+ background: rgba(255, 255, 255, 0.08);
+ backdrop-filter: blur(12px);
+ -webkit-backdrop-filter: blur(12px);
+ border: 1px solid rgba(255, 255, 255, 0.15);
+ border-radius: 16px;
+ box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+
+.border-radius-custom {
+ border-radius: 12px;
+ overflow: hidden;
+}
+
+
+/* Títulos com efeito degradê colorido */
+.text-gradient {
+ background: linear-gradient(45deg, #ff9a9e, #fecfef, #a1c4fd);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+}
+
+
+/* Efeito de hover nas imagens do Instagram */
+.custom-img-hover {
+ transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.custom-img-hover:hover {
+ transform: scale(1.03);
+ box-shadow: 0 10px 25px rgba(255, 193, 7, 0.3) !important;
+}
+
+
+/* Customização dos Inputs do formulário */
+.form-control {
+ background: rgba(255, 255, 255, 0.1);
+ border: 1px solid rgba(255, 255, 255, 0.2);
+ color: #fff !important;
+ border-radius: 8px;
+}
+
+
+.form-control:focus {
+ background: rgba(255, 255, 255, 0.15);
+ border-color: #ffc107;
+ box-shadow: 0 0 8px rgba(255, 193, 7, 0.5);
+}
+
+
+.form-control::placeholder {
+ color: rgba(255, 255, 255, 0.5);
+}
+///////////////interações DO JS
+// Executado quando a página termina de carregar completamente
+document.addEventListener("DOMContentLoaded", () => {
+    // Exemplo de Interação 1: Alerta amigável de Boas-vindas (Apenas na Home)
+    if (window.location.pathname.includes("index.html") || window.location.pathname === "/") {
+        console.log("Portfólio Mittmann carregado com sucesso!");
+    }
+
+
+    // Monitora a rolagem da página para exibir o botão de voltar ao topo
+    window.onscroll = function() {
+        configurarBotaoTopo();
+    };
+});
+
+
+// Exemplo de Interação 2: Botão Voltar ao Topo dinâmico
+function configurarBotaoTopo() {
+    const btn = document.getElementById("btnVoltarTopo");
+    if (btn) {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            btn.style.display = "block";
+        } else {
+            btn.style.display = "none";
+        }
+    }
+}
+
+
+function voltarAoTopo() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Rolagem suave elegante
+    });
+}
+
+
+// Exemplo de Interação 3: Validação Simples do Formulário de Contato (Campos Obrigatórios)
+function validarFormulario(event) {
+    // Impede o envio real do formulário para podermos validar antes
+    event.preventDefault();
+
+
+    const nome = document.getElementById("nome").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const assunto = document.getElementById("assunto").value.trim();
+    const mensagem = document.getElementById("mensagem").value.trim();
+
+
+    // Verificação se algum campo está em branco
+    if (nome === "" || email === "" || assunto === "" || mensagem === "") {
+        alert("⚠️ Por favor, preencha todos os campos obrigatórios do formulário.");
+        return false;
+    }
+
+
+    // Se passou na validação
+    alert(`Olá, ${nome}! Sua mensagem sobre "${assunto}" foi simulada com sucesso. (Requisito JS Validado!)`);
+    document.getElementById("formContato").reset(); // Limpa os campos
+    return true;
+}
